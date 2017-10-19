@@ -1,0 +1,39 @@
+apply plugin: 'com.android.library'
+apply plugin: 'maven'
+apply plugin: 'com.novoda.bintray-release'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.2"
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 26
+        versionCode 1
+        versionName "20170920"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+    }
+    lintOptions {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+}
+
+dependencies {
+    compile 'com.android.support:appcompat-v7:26.+'
+}
+
+publish {
+    userOrg = 'mylhyl'
+    groupId = 'com.mylhyl'
+    artifactId = 'circleDialog'
+    version = '2.2.0'
+    description = 'circleDialog ios style'
+    website = "https://github.com/mylhyl/Android-CircleDialog"
+}

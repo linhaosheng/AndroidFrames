@@ -1,0 +1,1 @@
+include ':app', ':trunk', ':banner', ':library', ':circledialog', ':BaseRecyclerViewAdapterHelper'
