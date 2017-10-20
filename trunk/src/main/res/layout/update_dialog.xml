@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="40dp" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/dialog_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:text="标题内容"
+            android:textColor="@color/color_blue_qian"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/view_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:text="是否更新新的软件"
+            android:textColor="@color/text_color"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="20dp" >
+
+            <Button
+                android:id="@+id/btn_dialog_no"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="30dp"
+                android:text="否"
+                android:background="@drawable/dialog_rec_btn_style"
+                android:textColor="@color/text_color" />
+
+            <Button
+                android:id="@+id/btn_dialog_yes"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/dialog_send_style"
+                android:text="是"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

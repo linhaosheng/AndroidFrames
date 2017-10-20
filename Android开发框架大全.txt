@@ -1,0 +1,93 @@
+一 ： 首先在项目导入trunk模块(Module)后，在项目的build.gradle文件中添加一下插件依赖
+ dependencies {
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.1'
+		classpath 'com.novoda:bintray-release:0.3.4'
+    }
+
+二 ：在Application 的Oncreate函数里面添加一下代码 FrameApp.init(this)即可使用.
+
+以下是各个框架的信息.
+
+
+图片加载框架 glide :  版本 ； 4.2.0  github地址: https://github.com/bumptech/glide 
+使用说明 : 需要在主项目的gradle文件添加一下插件依赖
+ dependencies {
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.1'
+    }
+	
+
+网络请求框架 : okhttp :  版本 ； 3.9.0  github地址: https://github.com/square/okhttp 
+
+json解析框架 : gson  :  版本 ； 2.8.2  github地址:  https://github.com/google/gson
+
+//日志查看框架 : xLog  ； 版本 ； 1.4.0 github地址: https://github.com/elvishew/xLog
+
+权限检查框架 : HiPermission  版本 ； 1.4.0  github地址: https://github.com/yewei02538/HiPermission
+
+对话框框架 : Android-CircleDialog   版本: 2.1.6   github地址:  https://github.com/mylhyl/Android-CircleDialog
+使用说明 ：需要在主项目的gradle文件添加一下插件依赖
+ dependencies {
+        classpath 'com.novoda:bintray-release:0.3.4'
+    }
+
+RecyclerAdapter适配框架 : BaseRecyclerViewAdapterHelper  版本 ； 2.9.30  github地址:  https://github.com/CymChad/BaseRecyclerViewAdapterHelper
+
+轮播图 : banner 版本 ； 1.4.10   github地址:  https://github.com/youth5201314/banner
+
+数据库： Realm  版本 ； 4.1.0-SNAPSHOT  github地址:  https://github.com/realm/realm-java 
+
+消息总线 : EventBus  版本 ； 3.0.0   github地址:  https://github.com/greenrobot/EventBus
+
+
+AppUtils ： 应用工具类功能有 :  
+(1)打开App ,  (2) 读取application 节点  meta-data 信息,  (3) 是否安装了指定包名的App  (4) 打开并安装文件.  (5)  卸载程序  (6)  判断是否前台运行(系统应用可以使用) 需要添加权限 < uses-permission android:name ="android.permission.GET_TASKS"/>
+(7) 判断服务是否运行,  (8)  停止服务. (9)  获取PackageInfo,  (10)  获取版本名称 ,  (11)  获取版本号 , (12) 获取应用签名 , (13)  将签名字符串转换成需要的32位签名 , (14) 比较版本号的大小,前者大则返回一个正数,后者大返回一个负数,相等则返回0   支持4.1.2,4.1.23.4.1.rc111这种形式,
+
+
+BitmapUtils : Bitmap工具类主要包括获取Bitmap和对Bitmap的操作:
+(1) 图片压缩处理,  (2)  获取一个指定大小的bitmap  , (3)  把bitmap转化为bytes,  (4) Stream转换成Byte , (5)  从View获取Bitmap ,  (6)  把一个View的对象转换成bitmap ,  (7)  将Drawable转化为Bitmap , (8)  将 Bitmap转化为Drawable  ,  (9) 合并两个Bitmap 
+(10) 放大缩小图片,  (11)  获得圆角的Bitmap , (12)  获得带倒影的Bitmap,  (13) 将彩色图转换为灰度图,  (14)  获得圆形的Bitmap ,  (15) 生成水印图片 水印在右下角  ,  (16)  重新编码Bitmap , (17)  旋转图片 , (18)  水平翻转图片 , (19)  垂直翻转图片 ,(20)   更改图片色系，变亮或变暗
+(20)  将彩色图转换为黑白图  (21) 读取图片属性：图片被旋转的角度 , (22)  饱和度处理 , (23)  亮度处理  (24)  色相处理  (25)  亮度、色相、饱和度处理  ,  (26) 怀旧效果处理  ,  (27) 模糊效果处理 , (28)   柔化效果处理 ,  (29) 光照效果处理.
+(30)  底片效果处理 , (31) 锐化效果处理 ,  (32)  浮雕效果处理 ,  (33) 将YUV格式的图片的源数据从横屏模式转为竖屏模式，注意：将源图片的宽高互换一下就是新图片的宽高 .
+
+CrashHandlerUtils : UncaughtException处理类  ,  DateUtils  :  日期操作工具类  ,  DensityUtils :  屏幕、尺寸、View相关工具类  ,  EmptyUtils : 判断是否为空工具类 ,  EncryptUtils : 加密工具类（只实现部分） , FastBlurUtils  : 毛玻璃效果  ,  FormatTimeUtils  :  用来计算显示的时间是多久之前的！
+GlideImageUtil :  Glide加载本地和网络图片  ,  KeyboardUtils  :  键盘相关工具类   ,  LogUtils  :  Log相关工具类  ,  NetworkUtils  :  网络相关工具类   ,  OutdatedUtils :  此类主要是用来放一些系统过时方法的处理  , PreferencesUtils :  Preferences存取相关方法  ,  RegexUtils  :  正则工具类
+ * 验证邮箱、手机号、电话号码、身份证号码、银行卡卡号、IP、邮政编码、车牌号等  ,  SmsObserver  :  发送短信   ,  SpannableStringUtils :  格式化字符串文本 。  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

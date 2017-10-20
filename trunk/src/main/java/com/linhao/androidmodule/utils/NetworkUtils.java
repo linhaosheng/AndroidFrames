@@ -7,6 +7,7 @@ import android.net.NetworkInfo;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.telephony.TelephonyManager;
+import android.util.Log;
 
 import com.linhao.androidmodule.FrameApp;
 import java.lang.reflect.Method;
@@ -355,4 +356,27 @@ public class NetworkUtils {
         return null;
     }
 
+    /**
+     *
+     *
+     * @param context
+     *            Context
+     * @return true 判断网络是wifi还是手机
+     */
+    public static int getNetWork(Context context) {
+        ConnectivityManager manager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo networkInfo = manager.getActiveNetworkInfo();
+
+        if (networkInfo != null && networkInfo.isConnected()) {
+            String type = networkInfo.getTypeName();
+            if (type.equalsIgnoreCase("WIFI")) {
+                Log.i("sql", "网店网络是wifi");
+                return 0;
+            } else if (type.equalsIgnoreCase("MOBILE")) {
+                Log.i("sql", "网店网络是手机");
+                return 1;
+            }
+        }
+        return -1;
+    }
 }
